@@ -1,0 +1,3 @@
+# PHP File Handling Bug: Silent fopen() Failure
+
+This repository demonstrates a common error in PHP file handling: failing to properly check the return value of `fopen()`.  If `fopen()` fails to open a file (e.g., because the file doesn't exist), it returns `false`.  The provided code snippet doesn't check for this and attempts to use the `$file` variable as if it were a valid resource, resulting in silent failures or unexpected behavior.  The solution shows how to correctly check the return value and handle the error appropriately.
